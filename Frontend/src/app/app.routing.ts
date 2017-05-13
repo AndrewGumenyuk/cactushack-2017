@@ -8,11 +8,11 @@ import {ModuleWithProviders} from "@angular/core";
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'news', pathMatch: 'full'},
-    {path: 'news', component: NewsComponent, data: {title: 'Recipe of the day'}},
-    {path: 'products', component: ProductsComponent, data: {title: 'Daily foods'}},
-    {path: 'report', component: ReportComponent, data: {title: 'Product report'}},
-    {path: 'settings', component: SettingsComponent, data: {title: 'Settings'}},
-    {path: 'stats', component: StatsComponent, data: {title: 'Stats'}}
+    {path: 'news', component: NewsComponent},
+    {path: 'products', component: ProductsComponent},
+    {path: 'report', component: ReportComponent},
+    {path: 'settings', component: SettingsComponent},
+    {path: 'stats', component: StatsComponent}
 ];
 
 export const appRoutingProviders: any[] = [];

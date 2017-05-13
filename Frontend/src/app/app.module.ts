@@ -10,12 +10,15 @@ import {StatsComponent} from "./stats/components/stats.component";
 
 import {routing, appRoutingProviders} from './app.routing';
 import {FormsModule} from "@angular/forms";
+import { HttpModule, JsonpModule } from '@angular/http';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        routing
+        routing,
+        HttpModule,
+        JsonpModule
     ],
     declarations: [
         AppComponent,

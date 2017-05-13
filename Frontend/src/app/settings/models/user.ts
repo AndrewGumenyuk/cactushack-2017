@@ -1,8 +1,5 @@
 export class User {
-    constructor() {}
-
-    age: number;
-    weight: number;
-    height: number;
-    activity: string;
+    constructor(
+        public age: number, public sex: string, public weight: number,
+        public height: number, public activity: string) {}
 }
