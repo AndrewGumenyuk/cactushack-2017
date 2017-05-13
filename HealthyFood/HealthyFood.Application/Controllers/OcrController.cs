@@ -37,7 +37,7 @@ namespace HealthyFood.Application.Controllers
                 }
 
                 string parsedText = Regex.Replace(ocrDto.ParsedResults[0].ParsedText, @"\s+", "");
-                var eElements = Regex.Matches(ocrDto.ParsedResults.FirstOrDefault().ParsedText, "(([Е{IsCyrillic}]{1}[0-9]{3})|([E{IsCyrillic}-]{2}[0-9]{3}))").Cast<Match>().Select(m => m.Value).ToList();
+                var eElements = Regex.Matches(parsedText, "(([Е{IsCyrillic}]{1}[0-9]{3})|([E{IsCyrillic}-]{2}[0-9]{3}))").Cast<Match>().Select(m => m.Value).ToList();
 
                 return Ok(eElements);
             }
