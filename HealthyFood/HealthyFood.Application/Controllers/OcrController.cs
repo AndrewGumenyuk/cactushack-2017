@@ -23,7 +23,7 @@ namespace HealthyFood.Application.Controllers
                 BinaryReader binaryReader = new BinaryReader(file.InputStream);
                 byte[] imageAsByteArray = binaryReader.ReadBytes(file.ContentLength);
                 var json = await ocrService.GetOrcServerResponce(imageAsByteArray);
-                return Ok();
+                return Ok(json);
             }
             else
             {
