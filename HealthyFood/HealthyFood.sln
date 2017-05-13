@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthyFood.Services", "Hea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthyFood.MockData", "HealthyFood.MockDate\HealthyFood.MockData.csproj", "{35A2BD05-6BF6-4406-95DC-8BAB554B0245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthyFood.ViewModels", "HealthyFood.ViewModels\HealthyFood.ViewModels.csproj", "{8DCB2073-1C91-4478-981C-08533615AE2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{35A2BD05-6BF6-4406-95DC-8BAB554B0245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A2BD05-6BF6-4406-95DC-8BAB554B0245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A2BD05-6BF6-4406-95DC-8BAB554B0245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCB2073-1C91-4478-981C-08533615AE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCB2073-1C91-4478-981C-08533615AE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCB2073-1C91-4478-981C-08533615AE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCB2073-1C91-4478-981C-08533615AE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
