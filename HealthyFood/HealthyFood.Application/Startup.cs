@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HealthyFood.Services;
+using HealthyFood.ViewModels;
 using Microsoft.Owin;
 using Owin;
 
@@ -12,6 +14,9 @@ namespace HealthyFood.Application
     {
         public void Configuration(IAppBuilder app)
         {
+            MemoryCasheService memoryCasheService = new MemoryCasheService();
+            memoryCasheService.Add("Profile", new Profile(21, 180, 32, PhysicalActivity.Average) , DateTimeOffset.MaxValue);
+
             ConfigureAuth(app);
         }
     }
