@@ -14,6 +14,7 @@ namespace HealthyFood.Application
     {
         public void Configuration(IAppBuilder app)
         {
+            //TODO: Only for Demo
             MemoryCasheService memoryCasheService = new MemoryCasheService();
             memoryCasheService.Add("Profile", new Profile(21, 180, 32, PhysicalActivity.Average) , DateTimeOffset.MaxValue);
 
