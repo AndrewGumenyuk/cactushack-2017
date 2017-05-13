@@ -238,6 +238,7 @@
     <Compile Include="Controllers\OcrController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RecipeNewsController.cs" />
+    <Compile Include="Controllers\UserStatisticsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -312,6 +313,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Profile\" />
+    <Folder Include="Views\UserStatistics\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
