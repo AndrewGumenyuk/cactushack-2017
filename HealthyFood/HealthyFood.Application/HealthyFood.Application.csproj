@@ -328,8 +328,6 @@
       <Name>HealthyFood.MockData</Name>
     </ProjectReference>
   </ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HealthyFood.Domain\HealthyFood.Services.csproj">
       <Project>{1971B069-CE4D-4261-9868-706F74C5D38E}</Project>
