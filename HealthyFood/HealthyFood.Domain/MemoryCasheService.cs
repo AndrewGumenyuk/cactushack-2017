@@ -3,6 +3,10 @@ using System.Runtime.Caching;
 
 namespace HealthyFood.Services
 {
+    /// <summary>
+    /// Method that doing CRUD operation with using Cashe
+    /// </summary>
+    /// <returns></returns>
     public class MemoryCasheService
     {
         public object GetValue(string key)
