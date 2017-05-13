@@ -35,26 +35,5 @@ namespace HealthyFood.ViewModels
 
         [JsonProperty(PropertyName = "physicalActivityType")]
         public PhysicalActivity PhysicalActivityType { get; }
-
-        [JsonProperty(PropertyName = "dailyCalorieRate")]
-        public double DailyCalorieRate 
-            => 10 * Weight + 6.25 * Height - 5 * Age + 5 * GetPhysicalActivityRate(PhysicalActivityType);
-
-        private double GetPhysicalActivityRate(PhysicalActivity activity)
-        {
-            switch (activity)
-            {
-                case PhysicalActivity.Low:
-                    return 1.2;
-                case PhysicalActivity.Small:
-                    return 1.4;
-                case PhysicalActivity.Average:
-                    return 1.6;
-                case PhysicalActivity.Tall:
-                    return 1.7;
-            }
-
-            throw new ArgumentException($"{nameof(activity)} haven't found any type");
-        }
     }
 }
