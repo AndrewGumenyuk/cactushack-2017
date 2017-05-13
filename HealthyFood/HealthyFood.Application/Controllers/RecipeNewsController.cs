@@ -4,11 +4,20 @@ using HealthyFood.ViewModels;
 
 namespace HealthyFood.Application.Controllers
 {
+    /// <summary>
+    /// Class that return the Recipes for User
+    /// </summary>
+    /// <returns></returns>
     public class RecipeNewsController : ApiController
     {
-        //[Route("api\v1\recipenews")]
+        /// <summary>
+        /// Method that return all Recipes for User by route <see cref="api/recipenews"/>
+        /// </summary>
+        /// <returns></returns>
         public Recipe[] Get()
         {
+            MemoryCasheService memoryCasheService = new MemoryCasheService();
+            var profile = memoryCasheService.GetValue("Profile");
             RecipeService recipeService = new RecipeService();
             return recipeService.GetAll();
         }
