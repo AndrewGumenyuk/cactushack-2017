@@ -16,8 +16,6 @@ namespace HealthyFood.Application.Controllers
         /// <returns></returns>
         public Recipe[] Get()
         {
-            MemoryCasheService memoryCasheService = new MemoryCasheService();
-            var profile = memoryCasheService.GetValue("Profile");
             RecipeService recipeService = new RecipeService();
             return recipeService.GetAll();
         }
