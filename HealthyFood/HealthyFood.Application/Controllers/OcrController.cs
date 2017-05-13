@@ -12,6 +12,7 @@ namespace HealthyFood.Application.Controllers
 {
     public class OcrController : ApiController
     {
+       // api/ocr
        public async Task<IHttpActionResult> Post()
        {
             var file = HttpContext.Current.Request.Files.Count > 0 ?
