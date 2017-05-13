@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Eitem.cs" />
+    <Compile Include="Aggregates\ProductTypeAggregate.cs" />
     <Compile Include="PhysicalActivity.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
