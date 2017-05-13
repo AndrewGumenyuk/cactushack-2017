@@ -30,16 +30,22 @@ namespace HealthyFood.Services
 
             }
         }
-        public static void GetAllEitems()
+        public static List<Eitem>  GetAllEitems()
         {
-            Eitem eitem = new Eitem()
+            List<Eitem> eitemsList = new List<Eitem>()
             {
-                Ecode = "476",
-                DangerLevel = "низкая",
-                Type = "Эмульгаторы",
-                RealName = "Полиглицерин",
-                Description = "Полиглецирин.Добавка применяется в производстве шоколадных изделий.В последнее время довольно часто полиглицерин (E476) получают путем переработки генетически-модифицированных продуктов (ГМО)."
-            };
+                new Eitem()
+                {
+                    Ecode = "Е476",
+                    DangerLevel = "низкая",
+                    Type = "Эмульгаторы",
+                    RealName = "Полиглицерин",
+                    Description = "Полиглецирин.Добавка применяется в производстве шоколадных изделий.В последнее время довольно часто полиглицерин (E476) получают путем переработки генетически-модифицированных продуктов (ГМО)."
+                },
+
+             };
+
+            return eitemsList;
         }
     }
 }

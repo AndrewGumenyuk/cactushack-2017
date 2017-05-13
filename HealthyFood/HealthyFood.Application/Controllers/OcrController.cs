@@ -11,6 +11,7 @@ using HealthyFood.Services;
 using Newtonsoft.Json;
 using HealthyFood.Application.Models;
 using System.Text.RegularExpressions;
+using HealthyFood.ViewModels;
 
 namespace HealthyFood.Application.Controllers
 {
@@ -19,6 +20,8 @@ namespace HealthyFood.Application.Controllers
        // api/ocr
        public async Task<IHttpActionResult> Post()
        {
+            List<Eitem> returnedEitems = new List<Eitem>();
+
             var file = HttpContext.Current.Request.Files.Count > 0 ?
                 HttpContext.Current.Request.Files[0] : null;
             if (file.ContentLength > 0)
@@ -40,9 +43,13 @@ namespace HealthyFood.Application.Controllers
                 var eElements = Regex.Matches(parsedText, "(([Е{IsCyrillic}]{1}[0-9]{3})|([E{IsCyrillic}-]{2}[0-9]{3}))").Cast<Match>().Select(m => m.Value).ToList();
 
                 //Get current E from MemoryCache
-
-
-                return Ok(eElements);
+                MemoryCasheService memoryCache = new MemoryCasheService();
+                var items = memoryCache.GetValue("ALL_EITEMS") as List<Eitem>;
+                if(items != null)
+                {
+                    returnedEitems = items.Where(item => eElements.Contains(item.Ecode)).ToList();
+                }
+                return Ok(returnedEitems);
             }
             else
             {
