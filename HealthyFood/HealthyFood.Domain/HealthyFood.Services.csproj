@@ -42,6 +42,13 @@
   <ItemGroup>
     <Compile Include="OcrService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthyFood.ViewModels\HealthyFood.ViewModels.csproj">
+      <Project>{8DCB2073-1C91-4478-981C-08533615AE2D}</Project>
+      <Name>HealthyFood.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
