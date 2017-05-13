@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using HealthyFood.ViewModels;
 namespace HealthyFood.Services
 {
     public class OcrService
@@ -29,6 +29,17 @@ namespace HealthyFood.Services
                 }
 
             }
+        }
+        public static void GetAllEitems()
+        {
+            Eitem eitem = new Eitem()
+            {
+                Ecode = "476",
+                DangerLevel = "низкая",
+                Type = "Эмульгаторы",
+                RealName = "Полиглицерин",
+                Description = "Полиглецирин.Добавка применяется в производстве шоколадных изделий.В последнее время довольно часто полиглицерин (E476) получают путем переработки генетически-модифицированных продуктов (ГМО)."
+            };
         }
     }
 }
