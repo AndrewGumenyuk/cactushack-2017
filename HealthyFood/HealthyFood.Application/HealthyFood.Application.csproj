@@ -235,6 +235,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OcrController.cs" />
+    <Compile Include="Controllers\RecipeNewsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -315,6 +317,28 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthyFood.Domain\HealthyFood.Services.csproj">
+      <Project>{1971b069-ce4d-4261-9868-706f74c5d38e}</Project>
+      <Name>HealthyFood.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthyFood.MockDate\HealthyFood.MockData.csproj">
+      <Project>{35a2bd05-6bf6-4406-95dc-8bab554b0245}</Project>
+      <Name>HealthyFood.MockData</Name>
+    </ProjectReference>
+  </ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthyFood.Domain\HealthyFood.Services.csproj">
+      <Project>{1971B069-CE4D-4261-9868-706F74C5D38E}</Project>
+      <Name>HealthyFood.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthyFood.ViewModels\HealthyFood.ViewModels.csproj">
+      <Project>{8DCB2073-1C91-4478-981C-08533615AE2D}</Project>
+      <Name>HealthyFood.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
