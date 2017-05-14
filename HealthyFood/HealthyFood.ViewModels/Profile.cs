@@ -9,6 +9,7 @@ namespace HealthyFood.ViewModels
             int age,
             int weight,
             int height,
+            byte sex,
             PhysicalActivity physicalActivityType)
         {
             if (age <= 0)
@@ -21,6 +22,7 @@ namespace HealthyFood.ViewModels
             Age = age;
             Weight = weight;
             Height = height;
+            Sex = sex;
             PhysicalActivityType = physicalActivityType;
         }
 
@@ -30,8 +32,11 @@ namespace HealthyFood.ViewModels
         [JsonProperty(PropertyName = "weight")]
         public int Weight { get; }
 
-        [JsonProperty(PropertyName = "  ")]
+        [JsonProperty(PropertyName = "height")]
         public int Height { get; }
+
+        [JsonProperty(PropertyName = "sex")]
+        public byte Sex { get; set; }
 
         [JsonProperty(PropertyName = "physicalActivityType")]
         public PhysicalActivity PhysicalActivityType { get; }

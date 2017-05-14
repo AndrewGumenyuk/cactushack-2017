@@ -17,7 +17,7 @@ namespace HealthyFood.Application
             //TODO: Only for Demo
             //SETUP PROFILE DATA
             MemoryCasheService memoryCasheService = new MemoryCasheService();
-            memoryCasheService.Add("Profile", new Profile(21, 180, 32, PhysicalActivity.Average) , DateTimeOffset.MaxValue);
+            memoryCasheService.Add("Profile", new Profile(21, 180, 32, 0,PhysicalActivity.Average) , DateTimeOffset.MaxValue);
             //SETUP EITEMS DATA
             var eitems = OcrService.GetAllEitems();
             memoryCasheService.Add("ALL_EITEMS", eitems, DateTimeOffset.MaxValue);

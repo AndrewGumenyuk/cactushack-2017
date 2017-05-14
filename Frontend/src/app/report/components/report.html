@@ -1,1 +1,36 @@
-<h1>Report component</h1>
+<div class="test-prod__article">
+    <img src="assets/images/candy.jpg" alt="" class="article__img">
+    <hr>
+
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4 block_img">
+            <img *ngIf="high" src="assets/images/red_bulb.png" alt="">
+            <img *ngIf="middle" src="assets/images/yellow_bulb.png" alt="">
+            <img *ngIf="low" src="assets/images/green_bulb.png" alt="">
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <p class="test-prod__paragraph">ВНИМАНИЕ!<br> Продукт содержит пищевые добавки!<br>
+            <span *ngFor="let item of reports">{{item.Ecode}} ({{item.DangerLevel}} опасность) </span></p>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+
+    <div class="spoiler" style="text-align: center;">
+        <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="assets/images/more.png" alt="">
+              </a>
+        <div class="collapse" id="collapseExample">
+            <div class="well">
+                <p *ngFor="let item of reports">{{item.Ecode}} ({{item.DangerLevel}} опасность)<br>
+                {{item.Description}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
