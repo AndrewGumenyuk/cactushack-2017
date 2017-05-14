@@ -17,17 +17,17 @@ namespace HealthyFood.Application.Controllers
         /// </summary>`
         /// <returns>return bool was profile saved or no</returns>
         [Route("")]
-        public bool UpdateProfile([FromBody] Profile model)
+        public bool UpdateProfile(PhysicalActivity activity, int age, int height, byte sex, int weight)
         {
-            if (model.Age <= 0)
-                throw new ArgumentException($"{nameof(model.Age)} can't be lass than 0");
-            if (model.Weight <= 0)
-                throw new ArgumentException($"{nameof(model.Weight)} can't be lass than 0");
-            if (model.Height <= 0)
-                throw new ArgumentException($"{nameof(model.Height)} can't be lass than 0");
+            if (age <= 0)
+                throw new ArgumentException($"{nameof(age)} can't be lass than 0");
+            if (weight <= 0)
+                throw new ArgumentException($"{nameof(weight)} can't be lass tahn 0");
+            if (height <= 0)
+                throw new ArgumentException($"{nameof(height)} can't be lass than 0");
 
             MemoryCasheService memoryCasheService = new MemoryCasheService();
-            UpdateProfileByUser(model, memoryCasheService);
+            UpdateProfileByUser(new Profile(age, weight, height, sex, activity), memoryCasheService);
 
             return true;
         }
