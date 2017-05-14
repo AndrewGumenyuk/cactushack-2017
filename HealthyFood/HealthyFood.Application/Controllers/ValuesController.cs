@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using HealthyFood.Services;
+using HealthyFood.ViewModels;
+using System;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace HealthyFood.Application.Controllers
 {
-    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -13,9 +15,25 @@ namespace HealthyFood.Application.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public bool Get(int age, int height, byte sex, int weight, int activity = 0)
         {
-            return "value";
+            if (age <= 0)
+                throw new ArgumentException($"{nameof(age)} can't be lass than 0");
+            if (weight <= 0)
+                throw new ArgumentException($"{nameof(weight)} can't be lass tahn 0");
+            if (height <= 0)
+                throw new ArgumentException($"{nameof(height)} can't be lass than 0");
+
+            MemoryCasheService memoryCasheService = new MemoryCasheService();
+            var physicalActivity = (PhysicalActivity)activity;
+            UpdateProfileByUser(new Profile(age, weight, height, sex, physicalActivity), memoryCasheService);
+            return true;
+        }
+
+        private static void UpdateProfileByUser(Profile model, MemoryCasheService memoryCasheService)
+        {
+            memoryCasheService.Delete("Profile");
+            memoryCasheService.Add("Profile", model, DateTimeOffset.MaxValue);
         }
 
         // POST api/values

@@ -16,18 +16,18 @@ namespace HealthyFood.Application.Controllers
         /// Method that return all Profile for User by route <see cref="api/profileuser/>
         /// </summary>`
         /// <returns>return bool was profile saved or no</returns>
-        [Route("")]
-        public bool UpdateProfile(PhysicalActivity activity, int age, int height, byte sex, int weight)
+        [Route("current")]
+        public bool UpdateProfile(int age)
         {
             if (age <= 0)
                 throw new ArgumentException($"{nameof(age)} can't be lass than 0");
-            if (weight <= 0)
-                throw new ArgumentException($"{nameof(weight)} can't be lass tahn 0");
-            if (height <= 0)
-                throw new ArgumentException($"{nameof(height)} can't be lass than 0");
+            //if (weight <= 0)
+            //    throw new ArgumentException($"{nameof(weight)} can't be lass tahn 0");
+            //if (height <= 0)
+            //    throw new ArgumentException($"{nameof(height)} can't be lass than 0");
 
-            MemoryCasheService memoryCasheService = new MemoryCasheService();
-            UpdateProfileByUser(new Profile(age, weight, height, sex, activity), memoryCasheService);
+            //MemoryCasheService memoryCasheService = new MemoryCasheService();
+            //UpdateProfileByUser(new Profile(age, weight, height, sex, activity), memoryCasheService);
 
             return true;
         }
@@ -41,7 +41,7 @@ namespace HealthyFood.Application.Controllers
         [Route("")]
         public Profile Get()
         {
-            MemoryCasheService memoryCasheService = new MemoryCasheService();
+                MemoryCasheService memoryCasheService = new MemoryCasheService();
             Profile profile = memoryCasheService.GetValue("Profile") as Profile;
             return profile;
         }
