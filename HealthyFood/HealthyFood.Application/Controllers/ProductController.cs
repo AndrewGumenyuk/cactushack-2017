@@ -17,6 +17,7 @@ namespace HealthyFood.Application.Controllers
         /// Method that return all Profile for User by route <see cref="api/products>
         /// </summary>`
         /// <returns></returns>
+        [Route("")]
         public Product[] GetByPhysicalActivityType()
         {
             MemoryCasheService memoryCasheService = new MemoryCasheService();

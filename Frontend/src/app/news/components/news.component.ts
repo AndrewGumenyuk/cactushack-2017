@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'news',
+    host: {"class": "col-xs-12 main carousel slide", "id": "myCarousel", "data-ride": "carousel"},
     templateUrl: './app/news/components/news.html',
     providers: [NewsService],
 })

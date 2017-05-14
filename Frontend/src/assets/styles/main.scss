@@ -25,11 +25,7 @@
 		right: 5%;
 	}
 }
-.footer{
-	min-height: 15%;
-	background-color: #000;
-	opacity: 0.9;
-}
+
 .row_example{
 	display: flex;
 	min-height: 100vh;
@@ -59,6 +55,12 @@
 		text-align: center;
 		font-size: 0.7em;
 	}
+	&__head{
+		color: lightgray;
+		text-align: center;
+		margin: 0;
+		padding-top: 10px;
+	}
 }
 .carousel-inner {
     	width: 80% !important;
@@ -70,6 +72,8 @@
 		bottom:15%;
 }
 .footer{
+	background-color: #000;
+	opacity: 0.9;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	&__img{
@@ -80,7 +84,10 @@
 
 /* settings form */
 .settings{
+	overflow: scroll;
 	background-image: url(../images/bg_settings.jpg);
+	color:rgba(255,255,255, 0.7) ;
+	font: Arial;
 	background-repeat: no-repeat;
 	background-position: fixed;
 	-webkit-background-size: cover;
@@ -104,7 +111,7 @@
 		padding-top: 50px;
 		}
 	&__form{
-		margin-top: 100px;
+		margin-top: 80px;//form margin top
 	}	
 }
 /* the end of settings form  */
@@ -161,3 +168,111 @@
 	}
 
 /* the end of status section */
+/* products section */
+.products{
+	overflow: scroll;
+	background-image: url(../images/bg_prodform.jpg);
+	background-repeat: no-repeat;
+	background-position: fixed;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	height: 85%;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+	        flex-shrink: 1;
+	        -webkit-flex-basis: auto;
+	                flex-basis: auto;
+	&__title{
+		text-transform: uppercase;
+		text-align: center;
+		color: #FFF;
+		padding-top: 30px;
+		opacity: 0.8;
+	}
+}
+.panel-body__paragraph{
+	color: #000;
+	text-align: justify;
+	font-size: 0.6em;
+}
+.panel-heading__title{
+	text-transform: uppercase;
+	color:#FFF;
+	opacity: 0.8;
+	font-size: 0.7em;
+	padding-top: 10px;
+}
+.accordion{
+	margin-top: 60px;
+}
+.custom-input{
+	background-color: rgba(0,0,0,0.9);
+}
+/* the end of products section */
+
+/* Stupid button*/
+.file-upload {
+    position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
+    overflow: hidden; /* Все что выходит за пределы - скрываем */
+    width: 24px; /* Задаем ширину кнопки выбора файла */
+    height: 24px; /* Задаем выстору кнопки выбора файла */
+
+    background: url(../images/camera.png);
+}
+.file-upload:hover {
+    background: url(../images/camera.png);
+}
+.file-upload input[type="file"]{
+    display: none; /* Обязательно скрываем настоящий Input File */
+}
+.file-upload label {
+    /* Растягиваем lable на всю возможную площадь блока .file-upload */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.gender-label{
+    margin-right: 10px;
+}
+.file-upload span {
+
+}
+.settings__button{
+   background-color: #7EB0B5;
+   margin-top: 10px;
+}
+/* Stupid button*/
+
+/* test-product section */
+.test-prod{
+	overflow: scroll;
+	background-color: rgba(255,255,255,0.7);
+	background-repeat: no-repeat;
+	background-position: fixed;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	height: 85%;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+	        flex-shrink: 1;
+	        -webkit-flex-basis: auto;
+	                flex-basis: auto;
+	&__paragraph{
+		color: #000;
+		text-align: justify;
+		padding-top: 20px;
+		font-size: 0.8em;
+		text-align: center;
+	}
+}
+.block_img{
+	text-align: center;
+}
+
+/* the end of test product section */

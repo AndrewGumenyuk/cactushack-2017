@@ -8,7 +8,12 @@
                     <a routerLink='/settings'><img src="../assets/images/settings.png" alt=""></a>
                 </div>
                 <div class="col-xs-2 col-sm-2 footer__img">
-                    <a routerLink=''><img src="../assets/images/camera.png" alt=""></a>
+                    <div class="file-upload">
+                        <label>
+                            <input type="file" (change)="fileChange($event)" [ngModel]="foo" (ngModelChange)="foo = $event"
+                                accept="image/*;capture=camera" id="cameraInput" name="cameraInput">
+                        </label>
+                    </div>
                 </div>
                 <div class="col-xs-2 col-sm-2 footer__img">
                     <a routerLink='/products'><img src="../assets/images/groceries.png" alt=""></a>

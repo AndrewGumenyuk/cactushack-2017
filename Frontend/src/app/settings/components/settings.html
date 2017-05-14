@@ -1,6 +1,64 @@
-<h1>Settings component</h1>
+<div class="settings__article">
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4"><img class="settings__img" src="assets/images/user.png" alt=""></div>
+        <div class="col-xs-4"></div>
+    </div>
+</div>
+<div class="settings__form">
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+            <form>
+                <div class="form-group">
+                    <label class='gender-label'>ВАШ ПОЛ</label>
+                    <label class="radio-inline">
+                           <input type="radio" [(ngModel)]="sex"  name="sex" value="male">Male<br>
+                        </label>
+                    <label class="radio-inline">
+                        <input type="radio" [(ngModel)]="sex"  name="sex" value="female">FeMale<br>
+                        </label>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">УРОВЕНЬ АКТИВНОСТИ</label>
+                    <select class="form-control custom-input" id="sel1">
+                        <option>Малая активность(сидячий образ жизни)</option>
+                        <option>Легкая активность(тренировки 1-3 раза в неделю)</option>
+                        <option>Умереная активность(умереные тренировки 1-5 раз в неделю)</option>
+                        <option>Повышеная активность(интенсивные тренировки 6-7 раз в неделю) </option>
+                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">ВАШ ВОЗРАСТ</label>
+                    <input class="form-control custom-input" id="pwd" value="{{age}}">
+                    <div class="col-xs-1"></div>
+                </div>
+                <!--<div class="form-group">
+                    <label for="pwd">ВАШ РОСТ</label>
+                    <input class="form-control custom-input" id="pwd" value="{{height}}">
+                    <div class="col-xs-1"></div>
+                </div>-->
+                <div class="form-group">
+                    <label for="pwd">ВАШ ВЕС</label>
+                    <input class="form-control custom-input" id="pwd" value="{{weight}}">
+                    <div class="col-xs-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-3">
+                        <button type="submit" class="btn btn-default settings__button">Сохранить</button>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--<h1>Settings component</h1>
 <p>{{user.age}}</p>
 <p>{{user.sex}}</p>
 <p>{{user.weight}}</p>
 <p>{{user.height}}</p>
-<p>{{user.activity}}</p>
+<p>{{user.activity}}</p>-->

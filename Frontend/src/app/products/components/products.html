@@ -1,11 +1,24 @@
-<h1>Products component</h1>
-<ul>
-    <li *ngFor="let product of products">
-        <p>{{product.name}}</p>
-        <p>{{product.amount}}</p>
-        <p>{{product.proteins}}</p>
-        <p>{{product.carbonHydrates}}</p>
-        <p>{{product.fat}}</p>
-        <p>{{product.energy}}</p>
-    </li>
-</ul>
+<div class="products__article">
+    <div class="container">
+        <h4 class="products__title">Мой рацион</h4>
+        <div class="panel-group accordion">
+            <div class="panel panel-default" *ngFor="let product of products; let i = index">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}">
+                            <p class="panel-heading__title">{{product.name}} ({{product.amount}}г)</p>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{i}}" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p class="panel-body__paragraph">Белки: {{product.proteins}}г</p>
+                        <p class="panel-body__paragraph">Жиры: {{product.fat}}г</p>
+                        <p class="panel-body__paragraph">Углеводы: {{product.carbonHydrates}}г</p>
+                        <p class="panel-body__paragraph">Енергетическая ценность: {{product.energy}}ккал</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

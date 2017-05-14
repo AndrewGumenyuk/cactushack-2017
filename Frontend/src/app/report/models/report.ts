@@ -1,8 +1,9 @@
 export class Report {
     constructor() {}
 
-    eCode: string;
-    type: string;
-    levelOfDangerous: string;
-    description: string;
+    Ecode: string;
+    Type: string;
+    DangerLevel: string;
+    Description: string;
+    RealName: string;
 }
