@@ -20,10 +20,14 @@ namespace HealthyFood.Services
                         new Product("Капуста брокколи варёная", amount: 100, proteins: 3, carbonHydrates: 4, fat: 0.4,
                             calories: 27),
                         new Product("Горох Пассим колотый", amount: 100, proteins: 23, carbonHydrates: 48.1, fat: 1.6,
-                            calories: 299),
+                            calories: 12),
                         new Product("Кабачок", amount: 100, proteins: 0.6, carbonHydrates: 4.6, fat: 0.3, calories: 24),
                         new Product("Бананы сушёные", amount: 100, proteins: 3.9, carbonHydrates: 80.5, fat: 1.8,
-                            calories: 390)
+                            calories: 390),
+                        new Product("Каша манная", amount: 100, proteins: 3.9, carbonHydrates: 80.5, fat: 1.8,
+                            calories: 12),
+                        new Product("Бананы сушёные", amount: 100, proteins: 3.9, carbonHydrates: 80.5, fat: 1.8,
+                            calories: 12),
                     })
             };
 
