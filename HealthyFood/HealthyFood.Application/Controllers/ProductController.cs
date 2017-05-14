@@ -26,8 +26,9 @@ namespace HealthyFood.Application.Controllers
                 throw new ArgumentException($"{nameof(profile)} can't be null");
 
             ProductService productService = new ProductService();
-            var result = productService.GeTypeAggregatesByType(profile.PhysicalActivityType);
-            return result.SelectMany(res => res.Products).ToArray();
+            Statistic statistic = new Statistic(profile);
+            var result = productService.GeTypeAggregatesByCalories(statistic.Proteins);
+            return result.ToArray();
         }
     }
 }
