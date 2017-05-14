@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 
 export class SettingsComponent implements OnInit {
-    constructor(private _settingsService: SettingsService; private router: Router) {
+    constructor(private _settingsService: SettingsService, private router: Router) {
         // this.user = _settingsService.getUser();
      }
 
@@ -23,9 +23,9 @@ export class SettingsComponent implements OnInit {
     user: User;
 
     activities: [
-        { id: 0, name: 'Малая активность(сидячий образ жизни)' }, 
-        { id: 1, name: 'Легкая активность(тренировки 1-3 раза в неделю)' }, 
-        { id: 2, name: 'Умереная активность(умереные тренировки 1-5 раз в неделю)' }, 
+        { id: 0, name: 'Малая активность(сидячий образ жизни)' },
+        { id: 1, name: 'Легкая активность(тренировки 1-3 раза в неделю)' },
+        { id: 2, name: 'Умереная активность(умереные тренировки 1-5 раз в неделю)' },
         { id: 3, name: 'Повышеная активность(интенсивные тренировки 6-7 раз в неделю)' }
     ];
     ngOnInit() {
