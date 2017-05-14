@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
             headers.append('Accept', 'application/json');
             this.http.post('http://localhost:2514/api/ocr', formData, new RequestOptions(headers))
                 .map(res => res.json())
-                .catch(error => Observable.throw(error))
                 .subscribe(
                     data => {
                         console.log('success');
